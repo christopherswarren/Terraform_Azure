@@ -61,7 +61,7 @@ resource "azurerm_network_security_rule" "rule_int_train" {
   direction                   = "Inbound"
   protocol                    = "*"
   source_port_range           = "*"
-  destination_port_ranges      = ["22","6443"]
+  destination_port_ranges     = ["22","6443"]
   source_address_prefixes     = ["10.240.0.0/24","10.200.0.0/16"]
   destination_address_prefix  = "*"
   resource_group_name         = "${azurerm_resource_group.rg_train.name}"
